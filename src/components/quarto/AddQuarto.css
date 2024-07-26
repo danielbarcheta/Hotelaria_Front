@@ -1,0 +1,9 @@
+.custom-label {
+  display: inline-block;
+  width: 100%; /* Largura desejada para a label */
+  text-align: left;
+}
+
+.title{
+  text-align: left;
+}

@@ -1,0 +1,26 @@
+# Node modules (dependencies)
+node_modules/
+
+# Vite build output
+.vite/
+
+# Build output directory
+dist/
+
+# Log files
+*.log
+
+# OS-specific files
+.DS_Store
+
+# IDE specific files
+.vscode/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Package lock file (optional, you may choose to include this)
+package-lock.json
+			x

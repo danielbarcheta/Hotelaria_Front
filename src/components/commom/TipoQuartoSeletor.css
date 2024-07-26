@@ -1,0 +1,42 @@
+.custom-select {
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.custom-select:hover {
+  border-color: #666;
+}
+
+.custom-select:focus {
+  outline: none;
+  border-color: #555;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.input-group {
+  margin-top: 10px;
+}
+
+.form-control {
+  width: calc(100% - 100px);
+  margin-right: 10px;
+}
+
+.btn-hotel {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.btn-hotel:hover {
+  background-color: #0056b3;
+}
