@@ -6,6 +6,7 @@ import QuartosExistentes from './components/quarto/QuartosExistentes';
 import Home from './components/home/Home';
 import NavBar from './components/layout/NavBar';
 import Footer from './components/layout/Footer';
+import ListagemQuartos from './components/quarto/ListagemQuartos';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path='/add-quarto' element={<AddQuarto/>}/>
           <Route path="/editar-quarto/:quartoId" element={<EditarQuarto />} />
           <Route path="/quartos-existentes" element={<QuartosExistentes />} />
+          <Route path='/quartos-listados' element={<ListagemQuartos/>}/>
         </Routes>
        </Router>
        <Footer/>
