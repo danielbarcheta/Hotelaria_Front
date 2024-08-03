@@ -15,11 +15,12 @@ function App() {
       <Router>
         <NavBar/>
         <Routes>
-          <Route path="/" element={<Home/>} />
+          <Route path="/" element={<Home/>}/>
           <Route path='/add-quarto' element={<AddQuarto/>}/>
-          <Route path="/editar-quarto/:quartoId" element={<EditarQuarto />} />
-          <Route path="/quartos-existentes" element={<QuartosExistentes />} />
+          <Route path="/editar-quarto/:quartoId" element={<EditarQuarto />}/>
+          <Route path="/quartos-existentes" element={<QuartosExistentes />}/>
           <Route path='/quartos-listados' element={<ListagemQuartos/>}/>
+          <Route path='/admin' element={<QuartosExistentes/>}/>
         </Routes>
        </Router>
        <Footer/>
