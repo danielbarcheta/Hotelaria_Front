@@ -7,6 +7,7 @@ import Home from './components/home/Home';
 import NavBar from './components/layout/NavBar';
 import Footer from './components/layout/Footer';
 import ListagemQuartos from './components/quarto/ListagemQuartos';
+import Admin from './components/admin/Admin';
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
           <Route path="/editar-quarto/:quartoId" element={<EditarQuarto />}/>
           <Route path="/quartos-existentes" element={<QuartosExistentes />}/>
           <Route path='/quartos-listados' element={<ListagemQuartos/>}/>
-          <Route path='/admin' element={<QuartosExistentes/>}/>
+          <Route path='/admin' element={<Admin/>}/>
         </Routes>
        </Router>
        <Footer/>
