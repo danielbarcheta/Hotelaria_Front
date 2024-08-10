@@ -25,7 +25,7 @@ body {
   left: 0;
   right: 0;
   content: '';
-  background-color:rgb(169, 77, 123) ;
+  background-color:rgb(227, 122, 101) !important;
   width: 0;
   margin: 0 auto;
   height: 4px;
@@ -56,12 +56,13 @@ body {
 
   /* Hotel custom color */
  .btn-hotel{
-  background-color: rgb(169, 77, 123);
-  color: #fff;
+  background-color: rgb(227, 122, 101) !important;
+  color: #ffffff !important;
   }
+
   .btn-hotel:hover{
-  background-color: rgb(137, 127, 132);
-  color: #fff;
+  background-color: rgb(137, 127, 132) !important;
+  color: #fff !important;
   transition: 0.7s;
   outline-color: transparent;
   outline-style:solid;
@@ -69,11 +70,11 @@ body {
   }
 
   .hotel-color{
-    color: rgb(77, 82, 169);
+    color: rgb(227, 122, 101);
 
   }
   .preco-quarto{
-    color:darkgoldenrod;
+    color:darkgoldenrod !important;
     font-family: 'Courier New', Courier, monospace;
     font-size:medium;
   }

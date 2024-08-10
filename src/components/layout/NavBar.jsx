@@ -10,7 +10,7 @@ const NavBar = () => {
   };
 
   return (
-    <nav className='navbar navbar-expand-lg bg-body-tertiary px-5 shadow mt-5 sticky-top'>
+    <nav className='navbar navbar-expand-lg bg-body-tertiary px-5 shadow mt-2 sticky-top'>
       <div className='container-fluid'>
         <Link to={"/"}>
           <span className='hotel-color'>Hotelaria</span>
