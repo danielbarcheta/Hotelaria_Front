@@ -9,9 +9,6 @@ const Footer = () => {
         <Row>
           <Col xs={12} md={12} className="text-center">
         <p>&copy; {today.getFullYear} Hotelaria</p>
-
-
-
           </Col>
         </Row>
       </Container>

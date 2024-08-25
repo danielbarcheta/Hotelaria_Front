@@ -26,8 +26,8 @@ const CardQuarto = ({quarto}) => {
             <Link to={`reservas/${quarto.id}`} className="btn btn-hotel btn-sm">
             Ver/Reservar
             </Link>
-
           </div>
+          
         </Card.Body>
 
 
