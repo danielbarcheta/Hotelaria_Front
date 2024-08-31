@@ -61,5 +61,50 @@ export async function getQuartoById(quartoId) {
     } catch(erro) {
         throw new Error(`Erro no fetch do quarto ${quartoId}. ${erro}`)
     }
-
 }
+
+
+export async function reservarQuarto(quartoId, reserva) {
+    try{
+        const response = await api.post(`/reservas/quarto/${quartoId}/reserva`, reserva)
+        return response.data
+    } catch (erro) {
+        if (erro.response && erro.response.data){
+            throw new Error(erro.response.data)
+        } else {
+            throw new Error(`Erro reservando quarto: ${erro.mensagem}`)
+        }
+    }
+}
+
+export async function getAllReservas() {
+    try{
+        const result = await api.get("/reservas/todas-reservas")
+        return result.data
+    } catch(erro){
+        throw new Error(`Erro no fetch de reservas : ${erro.message}`)
+    }
+}
+
+export async function getReservaByCodigoConfirmacao(codigoConfirmacao) {
+    try{
+        const result = await api.get(`/reservas/confirmacao/${codigoConfirmacao}`)
+        return result.data
+    } catch (erro) {
+        if(erro.response && erro.response.data) {
+            throw new Error(erro.response.data)
+        } else {
+            throw new Error(`Erro ao achar reserva: ${erro.message}`)
+        }
+    }
+}
+
+export async function cancelarResrva(reservaId) {
+    try{
+        const result = await api.delete(`/reservas/reserva/${reservaId}/deletar`)
+        return result.data
+    } catch (erro) {
+        throw new Error(`Erro cancelando reserva:gd ${erro.message}`)
+    }
+}
+
