@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import moment from 'moment'
 import { getReservaByCodigoConfirmacao, reservarQuarto } from '../utils/FuncoesAPI'
 import { useNavigate, useParams } from 'react-router-dom'
+import { Form, FormControl } from 'react-bootstrap'
 
 const ReservaForm = () => {
     const [isValidado, setIsValidado] = useState(false)
@@ -94,7 +95,49 @@ const ReservaForm = () => {
 }
 
   return (
-    <div>ReservaForm</div>
+    <>
+    <div className='container mb-5'>
+      <div className='row'>
+        <div className='col-md-6'>
+          <div className='card card-body mt-5'>
+            <h4 className='card card-title'>Reservar quarto</h4>
+            <Form noValidate validated={isValidado} onSubmit={handleSubmit}>
+              <Form.Group>
+                <Form.Label htmlFor='nomeCompletoHospede'>Nome Completo:</Form.Label>
+                  <FormControl
+                  required
+                  type='text'
+                  id='nomeCompletoHospede'
+                  value={reserva.nomeCompletoHospede}
+                  placeholder='Digite seu nome completo'
+                  onChange={handleInputChange}/>
+
+                  <FormControl.Feedback type='invalid'>
+                    Por favor insira seu nome completo
+                  </FormControl.Feedback>
+              </Form.Group>
+
+              <Form.Group>
+                <Form.Label htmlFor='emailHospede'>Email:</Form.Label>
+                  <FormControl
+                  required
+                  type='email'
+                  id='emailHospede'
+                  value={reserva.nomeCompletoHospede}
+                  placeholder='Digite seu e-mail'
+                  onChange={handleInputChange}/>
+
+                  <FormControl.Feedback type='invalid'>
+                    Por favor insira seu e-mail 
+                  </FormControl.Feedback>
+              </Form.Group>
+            </Form>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    </>
   )
 }
 
