@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import moment from 'moment'
+import { getReservaByCodigoConfirmacao, reservarQuarto } from '../utils/FuncoesAPI'
+import { useNavigate, useParams } from 'react-router-dom'
 
 const ReservaForm = () => {
     const [isValidado, setIsValidado] = useState(false)
-    const [submited, isSubmited] = useState(false)
+    const [isSubmitted, setIsSubmitted] = useState(false)
     const [mensagemErro, setMensagemErro] = useState("")
     const [precoQuarto, setPrecoQuarto] = useState(0)
     const [reserva, setReserva] = useState({
@@ -14,11 +16,16 @@ const ReservaForm = () => {
       numeroAdultos: " ",
       numeroCriancas: " "
     })
-    const [quartoInfo, setQuartoInfo] = useState({
+
+    const [quartoInfo, setQuartoInfo] = useState({ 
       foto: " ",
       tipoQuarto: " ",
       precoQuarto: " "
     })
+
+    const { quartoId } = useParams
+
+    const navigate = useNavigate()
 
     const getPrecoQuartoById = async (quartoId) => {
       try{
@@ -48,7 +55,7 @@ const ReservaForm = () => {
       return diffDias * preco
     }
 
-    const isHospedeValido = () => {
+    const isContagemHospedesValida = () => {
       const numAdultos = parseInt(reserva.numeroAdultos)
       const numCriancas = parseInt(reserva.numeroCriancas)
       const numTotal = numAdultos + numCriancas
@@ -68,8 +75,23 @@ const ReservaForm = () => {
     const handleSubmit = (e) => {
       e.preventDefault()
       const form = e.currentTarget
-      if(form.checkValidity( === false || !isHospedeValido))
+      if(form.checkValidity() === false || !isContagemHospedesValida || !isDataCheckOutValida) {
+        e.stopPropagation()
+      } else {
+        setIsSubmitted(true)
+      }
+      setIsValidado(true)
     }
+
+    const handleReserva = async () => {
+        try{ codigoConfirmacao = await reservarQuarto(quartoId, reserva);
+            setIsSubmitted(true)
+            navigate("/", {state: {message : codigoConfirmacao}})
+    } catch(erro) {
+        setMensagemErro(erro)
+        navigate("/", {state: {erro : mensagemErro}})
+    }
+}
 
   return (
     <div>ReservaForm</div>
