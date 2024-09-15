@@ -3,6 +3,7 @@ import moment from 'moment'
 import { getReservaByCodigoConfirmacao, reservarQuarto } from '../utils/FuncoesAPI'
 import { useNavigate, useParams } from 'react-router-dom'
 import { Form, FormControl } from 'react-bootstrap'
+import ReservaSummary from './ReservaSummary'
 
 const ReservaForm = () => {
     const [isValidado, setIsValidado] = useState(false)
@@ -111,7 +112,7 @@ const ReservaForm = () => {
                   value={reserva.nomeCompletoHospede}
                   placeholder='Digite seu nome completo'
                   onChange={handleInputChange}/>
-
+                  
                   <FormControl.Feedback type='invalid'>
                     Por favor insira seu nome completo
                   </FormControl.Feedback>
@@ -126,16 +127,104 @@ const ReservaForm = () => {
                   value={reserva.nomeCompletoHospede}
                   placeholder='Digite seu e-mail'
                   onChange={handleInputChange}/>
-
+                
                   <FormControl.Feedback type='invalid'>
                     Por favor insira seu e-mail 
                   </FormControl.Feedback>
               </Form.Group>
+
+              <fieldset style={{border: "2px"}}>
+                <legend>Período de hospedagem</legend>
+                <div className='row'>
+                  <div className='col-6'>
+
+                <div className='col-6'>
+                  <Form.Label htmlFor='dataCheckIn'>Data Check-In:</Form.Label>
+                    <FormControl
+                    required
+                    type='date'
+                    id='dataCheckIn'
+                    value={reserva.dataCheckIn}
+                    placeholder='Digite sua data de check-in'
+                    onChange={handleInputChange}/>
+
+                    <FormControl.Feedback type='invalid'>
+                      Por favor insira sua data de check-in 
+                    </FormControl.Feedback>
+                </div>
+
+                <div className='col-6'>
+                  <Form.Label htmlFor='dataCheckOut'>Data Check-Out:</Form.Label>
+                    <FormControl
+                    required
+                    type='date'
+                    id='dataCheckOut'
+                    value={reserva.dataCheckOut}
+                    placeholder='Digite sua data de check-out'
+                    onChange={handleInputChange}/>
+
+                    <FormControl.Feedback type='invalid'>
+                      Por favor insira sua data de check-out 
+                    </FormControl.Feedback>
+                </div>
+                {mensagemErro && <p className='error-message text-danger'>{mensagemErro}</p>}
+
+                <fieldset>
+                  <legend>Numero de Hospedes</legend>
+                  <div className='row'>
+                    <div className='col-6'>
+                      <Form.Label htmlFor="numeroAdultos">Adultos :</Form.Label>
+                      <FormControl
+                    required
+                    type='number'
+                    id='numeroAdultos'
+                    value={reserva.numeroAdultos}
+                    placeholder='0'
+                    min={1}
+                    onChange={handleInputChange}/>
+
+                    <FormControl.Feedback type='invalid'>
+                      Por favor, selecione ao menos um adulto
+                    </FormControl.Feedback>
+                    </div>
+
+                    <div className='col-6'>
+                      <Form.Label htmlFor="numeroCriancas">Crianças :</Form.Label>
+                      <FormControl
+                    required
+                    type='number'
+                    id='numeroCriancas'
+                    value={reserva.numeroCriancas}
+                    placeholder='0'
+                    onChange={handleInputChange}/>
+
+                    <FormControl.Feedback type='invalid'>
+                      Por favor, digite o número de crianças.
+                    </FormControl.Feedback>
+                    </div>
+                  </div>
+                </fieldset>
+                    
+
+                  </div>
+                </div>
+              </fieldset>
+
+              <div className='form-group mt-2 mb-2'>
+                <button type='submit' className='btn btn-hotel'>
+                  Continuar
+                  </button>
+              </div>
             </Form>
           </div>
         </div>
+        <div className='col-md-6'>
+          {isSubmitted && (
+            <ReservaSummary
+            reserva={undefined} pagamento={calcularPagamento} isFormularioValido={isValidado} onConfirm={handleReserva}/>
+          )}
+        </div>
       </div>
-      
     </div>
     </>
   )
