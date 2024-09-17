@@ -8,6 +8,7 @@ import NavBar from './components/layout/NavBar';
 import Footer from './components/layout/Footer';
 import ListagemQuartos from './components/quarto/ListagemQuartos';
 import Admin from './components/admin/Admin';
+import Checkout from './components/checkout/Checkout';
 
 function App() {
   return (
@@ -22,9 +23,9 @@ function App() {
           <Route path="/quartos-existentes" element={<QuartosExistentes />}/>
           <Route path='/quartos-listados' element={<ListagemQuartos/>}/>
           <Route path='/admin' element={<Admin/>}/>
+          <Route path='/reservar-quarto/:quartoId' element={<Checkout/>}/>
         </Routes>
        </Router>
-       <Footer/>
     </main>
     </>
   );

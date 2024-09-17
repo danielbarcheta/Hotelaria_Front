@@ -7,11 +7,9 @@ const ServicoHotel = () => {
   return (
     <>
     <Container className='mb-2'>
-      <Header title={"Nossos Serviços"}/>
+      
       <Row>
         <h4 className='text-center'>
-        Serviços do <span className='hotel-color'>Palace Hotel  </span>
-
         <span className='gap-2'>
           <FaClock/> Recepção 24h
         </span>

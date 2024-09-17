@@ -23,7 +23,7 @@ const CardQuarto = ({quarto}) => {
           </div>
 
           <div className='flex-shrink-0 mt-3'>
-            <Link to={`reservas/${quarto.id}`} className="btn btn-hotel btn-sm">
+            <Link to={`/reservar-quarto/${quarto.id}`} className="btn btn-hotel btn-sm">
             Ver/Reservar
             </Link>
           </div>

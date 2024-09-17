@@ -2,6 +2,7 @@
 body {
   min-height: 100vh;
   padding-bottom: 50px;
+  background-color: rgb(255, 249, 249) !important;
 }
 
 .card {
@@ -11,6 +12,7 @@ body {
 /* Navigation bar definitions */
  .navbar{
   padding: 0;
+  background-color: #ffffff;
  }
  .navbar .navbar-nav .nav-link{
   padding: 1em;
@@ -25,7 +27,7 @@ body {
   left: 0;
   right: 0;
   content: '';
-  background-color:rgb(227, 122, 101) !important;
+  background-color:rgb(148, 148, 148) !important;
   width: 0;
   margin: 0 auto;
   height: 4px;
@@ -83,10 +85,8 @@ body {
     height: '100vh'
   }
 
-
-
 .parallax {
-  background-image: url("./assets/images/parrall.jpg");
+  background-image: url("./assets/imagens/sunrise.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -96,9 +96,9 @@ body {
 
 .header {
   position: relative;
-  height: 150px;
+  height: 500px;
   background-size: cover;
-  background-image: url("./assets/images/services4.jpg");
+  background-image: url("./assets/images/sunrise.jpg");
   background-position: center center;
 }
 .header-title {
@@ -193,7 +193,7 @@ body {
 
 /* The header banner */
 .header-banner {
-  background-image:  url("./assets/images/services-1.jpg");
+  background-image:  url("./assets/imagens/exterior-edge-infinity.jpg");
    background-size: cover;
   background-position: center;
    position: relative;
@@ -202,7 +202,7 @@ body {
 
 .header-banner {
   position: relative;
-  height: 500px;
+  height: 45em;
 }
 
 @media only screen and (max-width: 768px) {
@@ -225,4 +225,106 @@ body {
   background-color: #f5f5f5;
   height: 60px;
   text-align: center;
+}
+
+Palace {
+  text-decoration: none;
+}
+
+.todos-quartos{
+  height: 30px;
+  margin-top: 6px
+}
+
+.bi-book, .bi-view-list {
+  margin-right: 5px;
+}
+
+.todos-quartos {
+  margin-top: 20px;
+}
+
+.card {
+  padding: 0;
+}
+
+/* Estilo para os cards */
+.card {
+  border: none;
+  border-radius: 0px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card-img-top {
+  height: 200px; /* Ajuste a altura da imagem conforme necessário */
+  object-fit: cover; /* Mantém a proporção da imagem e cobre o elemento */
+}
+
+.card-body {
+  padding: 1.25rem;
+  background-color: #ffffff;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.preco-quarto {
+  font-size: 1rem;
+  color: #888;
+}
+
+.btn-hotel {
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  border: none;
+}
+
+.btn-hotel:hover {
+  background-color: #0056b3;
+}
+
+/* Ajuste do carrossel */
+.carousel-item {
+  padding: 0 15px;
+}
+
+.carousel-inner {
+  display: flex;
+}
+
+.carousel-item > .row {
+  margin: 0 -15px;
+}
+
+a.carousel-control-prev {
+  width: 90px;
+}
+
+a.carousel-control-next {
+  width: 90px;
+}
+
+.bg-body-tertiary{
+  background-color: rgb(52, 54, 71) !important;
+}
+
+.palachotel {
+  background-color: transparent;
+}
+
+.bs-card-bg {
+  background-color: none;
 }

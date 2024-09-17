@@ -12,10 +12,7 @@ const Home = () => {
       <section className='container'>
         <QuartosCarousel/>
         <Parallax/>
-        <QuartosCarousel/>
         <ServicoHotel/>
-        <Parallax/>
-        <QuartosCarousel/>
       </section>
     </section>
   )
