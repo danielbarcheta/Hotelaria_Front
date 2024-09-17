@@ -5,7 +5,7 @@ const Admin = () => {
   return (
     <section className="container mt-5">
       <h2>Painel de Administração</h2>
-      <Link to={"/add-quarto"}>Gerenciar Quartos</Link>
+      <Link to={"/add-quarto"}>Adicionar Quarto/Tipo</Link>
     </section>
   )
 }
