@@ -13,18 +13,15 @@ Antes de iniciar o projeto, certifique-se de ter as seguintes ferramentas instal
 
 1. **Clone o repositório**
 
-2.Navegue para o diretório do projeto
+2. **Navegue para o diretório do projeto**
 
 cd Palace_Hotel_Front
-Instale as dependências
 
-Use o NPM ou o Yarn para instalar as dependências do projeto:
+3. **Instale as dependências**
 
 npm install
 
-Execução do Projeto
-Para rodar o front-end em modo de desenvolvimento, use um dos seguintes comandos:
-
-Com NPM:
+4. **Execução do Projeto**
+Para rodar o front-end em modo de desenvolvimento, use:
 
 npm run dev
