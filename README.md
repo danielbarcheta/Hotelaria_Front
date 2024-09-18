@@ -1,6 +1,6 @@
 # Palace Hotel Front-end
 
-Bem-vindo ao front-end do projeto Palace Hotel! Este README fornece instruções sobre como configurar e executar o front-end, que é baseado em React e Vite.
+Bem-vindo ao front-end do projeto Palace Hotel! Este README fornece instruções sobre como configurar e executar o front-end usando o Vite
 
 ## Pré-requisitos
 
