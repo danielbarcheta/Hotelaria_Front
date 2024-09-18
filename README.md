@@ -1,8 +1,30 @@
-# React + Vite
+# Palace Hotel Front-end
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bem-vindo ao front-end do projeto Palace Hotel! Este README fornece instruções sobre como configurar e executar o front-end, que é baseado em React e Vite.
 
-Currently, two official plugins are available:
+## Pré-requisitos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Antes de iniciar o projeto, certifique-se de ter as seguintes ferramentas instaladas em sua máquina:
+
+- **Node.js**: O Vite e o React requerem o Node.js. [Download do Node.js](https://nodejs.org/)
+- **NPM ou Yarn**: Para gerenciar as dependências e executar o projeto. O NPM é instalado automaticamente com o Node.js. [Instalação do Yarn](https://classic.yarnpkg.com/en/docs/install/)
+
+## Configuração do Projeto
+
+1. **Clone o repositório**
+
+2.Navegue para o diretório do projeto
+
+cd Palace_Hotel_Front
+Instale as dependências
+
+Use o NPM ou o Yarn para instalar as dependências do projeto:
+
+npm install
+
+Execução do Projeto
+Para rodar o front-end em modo de desenvolvimento, use um dos seguintes comandos:
+
+Com NPM:
+
+npm run dev
